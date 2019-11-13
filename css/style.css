@@ -21,6 +21,7 @@ body {
 }
 
 #scoreboard {
+    margin: 1% 0%;
     display: inline-grid;
     border: 1px solid #ffffff;
     font-size: 5rem;
