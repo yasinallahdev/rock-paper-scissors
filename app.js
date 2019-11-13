@@ -2,10 +2,11 @@ const http = require('http');
 const fs = require('fs');
 const url = require('url');
 const querystring = require('querystring');
+const game = require('./gameplay.js');
 
 const server = http.createServer( (request, response) => {
-    const page = url.parse(req.url).pathname;
-    const params = querystring.parse(url.parse(req.url).query);
+    const page = url.parse(request.url).pathname;
+    const params = querystring.parse(url.parse(request.url).query);
     switch(page) {
         case '/':
             fs.readFile("index.html", (error, data) => {
@@ -27,6 +28,11 @@ const server = http.createServer( (request, response) => {
                 response.write(data);
                 response.end();
             })
+            break;
+        case '/api':
+            if("userChoice" in params) {
+
+            }
             break;
         default:
             fs.readFile("error.html", (error, data) => {
