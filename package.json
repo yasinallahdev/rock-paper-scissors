@@ -1,0 +1,19 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "0.0.1",
+  "description": "\"Rock Paper Scissors game in NODE.JS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasinallahdev/rock-paper-scissors.git"
+  },
+  "author": "Ya Sin Supreme Allah",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/yasinallahdev/rock-paper-scissors/issues"
+  },
+  "homepage": "https://github.com/yasinallahdev/rock-paper-scissors#readme"
+}
