@@ -9,11 +9,22 @@
     </head>
     <body>
 
-        <h1>Quartz, Parchment, Shears: Frosty Server Edition</h1>
+        <h1>⛰️ Quartz, 📰 Parchment, ✂️ Shears: Frosty Server Edition</h1>
 
-        <button id="quartzButton">Quartz</button>
-        <button id="parchmentButton">Parchment</button>
-        <button id="shearsButton">Shears</button>
+        <section id="scoreboard">
+            <header class = "scoreboardPart">Scoreboard</header>
+            <section id = "userWins">0</section>
+            <section id = "computerWins">0</section>
+            <section class = "scoreboardPart"><p>User</p></section>
+            <section class = "scoreboardPart"><p>Computer</p></section>
+        </section>
+
+        <section>
+            <button id="quartzButton">⛰️ Quartz</button>
+            <button id="parchmentButton">📰 Parchment</button>
+            <button id="shearsButton">✂️ Shears</button>
+        </section>
+        <p id="resultParagraph"></p>
 
         <script src="js/script.js"></script>
     </body>

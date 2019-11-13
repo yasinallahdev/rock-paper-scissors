@@ -31,7 +31,10 @@ const server = http.createServer( (request, response) => {
             break;
         case '/api':
             if("userChoice" in params) {
-
+                game.generateComputerChoice();
+                response.writeHead(200, {"Content-Type": "application/json"});
+                response.write(JSON.stringify(game.checkWhoWins(params["userChoice"])));
+                response.end();
             }
             break;
         default:

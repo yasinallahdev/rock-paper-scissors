@@ -1,15 +1,33 @@
-const quartzButton = document.querySelector("#quartzButton");
-const parchmentButton = document.querySelector("#parchmentButton");
-const shearsButton = document.querySelector("#shearsButton");
+const buttons = document.querySelectorAll('button');
+const resultParagraph = document.querySelector('#resultParagraph');
+const userWins = document.querySelector('#userWins');
+const computerWins = document.querySelector('#computerWins');
 
-quartzButton.addEventListener('click', () => {
-    alert("Quartz");
+buttons.forEach(element => {
+    element.addEventListener('click', () => {
+        let userChoice;
+        switch(element.id) {
+            case "quartzButton":
+                userChoice = "Quartz";
+                break;
+            case "parchmentButton":
+                userChoice = "Parchment";
+                break;
+            case "shearsButton":
+                userChoice = "Shears";
+                break;
+            default:
+                alert("There was an error.");
+                return;
+        }
+        fetch(`/api?userChoice=${userChoice}`)
+            .then(res => res.json())
+            .then(response => {
+                console.table(response);
+                resultParagraph.textContent = `${response["outcome"]}, because you chose ${response["userChoice"]} and the computer chose ${response["computerChoice"]}`;
+                userWins.textContent = response["userWins"];
+                computerWins.textContent = response["computerWins"];
+            })
+            .catch(err => console.log(err));
+    })
 });
-
-parchmentButton.addEventListener('click', () => {
-    alert("Parchment");
-})
-
-shearsButton.addEventListener('click', () => {
-    alert("Shears");
-})

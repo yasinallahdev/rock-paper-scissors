@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+#resultParagraph {
+    font-size: 2.5rem;
+}
+
+body {
+    text-align: center;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+#scoreboard {
+    display: inline-grid;
+    border: 1px solid #ffffff;
+    font-size: 5rem;
+    width: 50rem;
+    height: 40rem;
+    grid-template-rows: 20% 60% 20%;
+    grid-template-columns: 50% 50%;
+}
+
+#scoreboard header {
+    grid-column: 1 / span 2;
+}
+
+#scoreboard header, #scoreboard section { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffffff;
+}
+
+#userWins, #computerWins {
+    font-size: 10rem;
+}
+
+#userWins {
+    color: #0000ff;
+    font-weight: bolder;
+}
+
+#computerWins {
+    color: 	#ff8c00;
+    font-weight: bolder;
+}
